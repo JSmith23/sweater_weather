@@ -3,12 +3,12 @@ require 'rails_helper'
 describe 'DarkSky' do
   before(:each) do
     @coords = {"lat":39.7392358, "lng":-104.990251}
-    @dark_sky = DarkskyService.new(@coords)
+    @forecast = ForecastFacade.new(@coords)
   end
 
-  describe "DarkSky API" do
+  describe "Forecast Facade" do
     it "get back weather forecast details" do
-      expect(@dark_sky).to be_an_instance_of(DarkskyService)
+      expect(@forecast).to be_an_instance_of(ForecastFacade)
     end
   end
 
