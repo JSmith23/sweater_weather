@@ -1,14 +1,16 @@
 require 'rails_helper'
 
-describe 'DarkSky' do
+describe 'GifGenerator' do
   before(:each) do
     @location = "Denver, CO"
     @gifgenerate = GifGenerator.new(@location)
   end
 
   describe "GifGenerator" do
-    it "gif images", :vcr do
-      expect(@forecast).to be_an_instance_of(ForecastFacade)
+    it ".images", :vcr do
+      gif = @gifgenerate.images
+
+      expect(gif.count).to eq(25)
     end
   end
 
