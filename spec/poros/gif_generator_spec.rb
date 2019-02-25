@@ -7,7 +7,7 @@ describe 'GifGenerator' do
   end
 
   describe "GifGenerator" do
-    it ".images", :vcr do
+    xit ".images", :vcr do
       gif = @gifgenerate.images
       expect(gif.count).to eq(25)
     end
