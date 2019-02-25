@@ -12,10 +12,11 @@ describe 'DarkSky' do
     end
   end
 
-  it ".get_forecast" do
-    response = @dark_sky.get_forecast
+  it ".get_forecast", :vcr do
+    data = @dark_sky.get_forecast
 
+    expect(data).to have_key(:currently)
+    expect(data).to have_key(:hourly)
+    expect(data).to have_key(:daily)
   end
-
-
 end
