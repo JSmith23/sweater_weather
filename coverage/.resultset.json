@@ -284,7 +284,6 @@
       "/Users/Jay/turing/3module/r2_projects/sweater_weather/app/poros/gif_generator.rb": [
         1,
         1,
-        null,
         1,
         2,
         2,
@@ -293,7 +292,6 @@
         1,
         2,
         50,
-        null,
         null,
         null,
         null
@@ -341,8 +339,15 @@
         1,
         null,
         null
+      ],
+      "/Users/Jay/turing/3module/r2_projects/sweater_weather/app/serializers/giphy_serializer.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1551114003
+    "timestamp": 1551114819
   }
 }
