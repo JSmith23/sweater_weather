@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe 'Giphy Request' do
   before(:each) do
-    @location = {location: "Denver, Co"}
-    @gifger = GifGenerator.new(@location).images
+    @location = [{location: "Denver, Co"}]
+    @gifger = GifGenerator.new(@location).get_images
   end
 
   describe "Visit endpoint" do

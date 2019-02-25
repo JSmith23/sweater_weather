@@ -2,7 +2,6 @@ class GifGenerator
   attr_reader :location
   def initialize(location)
     @location = location
-    # @gif = GiphyService.new(@location).get_data
   end
 
   # def images
@@ -11,11 +10,15 @@ class GifGenerator
   #   end
   # end
 
+  def get_images
+    images.map do |data|
+      Gif.new(data)
+    end
+  end
+
   def images
-    gif = @location.map do |data|
-      forecast = GiphyService.new(data[:icon].term)
-      binding.pry
-      Gif.new(GiphyService.new(forecast))
+    @location.map do |data|
+      GiphyService.new(data[:icon]).get_data
     end
   end
 end

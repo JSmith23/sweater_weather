@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-25T11:34:51-07:00">2019-02-25T11:34:51-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-25T12:03:38-07:00">2019-02-25T12:03:38-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">90.1%</span></span>
+    (<span class="covered_percent"><span class="green">96.48%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.2
+         4.24
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>18</b> files in total.
-    <b>192</b> relevant lines. 
-    <span class="green"><b>173</b> lines covered</span> and
-    <span class="red"><b>19</b> lines missed </span>
+    <b>19</b> files in total.
+    <b>199</b> relevant lines. 
+    <span class="green"><b>192</b> lines covered</span> and
+    <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -111,13 +111,23 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#dc51dcaa5626797739ff5ac1368761cdfce5f193" class="src_link" title="app/poros/gif_generator.rb">app/poros/gif_generator.rb</a></td>
-        <td class="red strong">77.78 %</td>
-        <td>21</td>
-        <td>9</td>
-        <td>7</td>
+        <td class="strong"><a href="#38dac73b2574d6725ae664c872a875368c475dcd" class="src_link" title="app/poros/gif.rb">app/poros/gif.rb</a></td>
+        <td class="red strong">66.67 %</td>
+        <td>8</td>
+        <td>6</td>
+        <td>4</td>
         <td>2</td>
-        <td>1.1</td>
+        <td>0.7</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#dc51dcaa5626797739ff5ac1368761cdfce5f193" class="src_link" title="app/poros/gif_generator.rb">app/poros/gif_generator.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>24</td>
+        <td>10</td>
+        <td>10</td>
+        <td>0</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
@@ -162,22 +172,22 @@
       
       <tr>
         <td class="strong"><a href="#d08fa30c0ae93d15130cc41ea29e869b383bfe16" class="src_link" title="app/services/giphy_service.rb">app/services/giphy_service.rb</a></td>
-        <td class="red strong">50.0 %</td>
+        <td class="green strong">100.0 %</td>
         <td>25</td>
         <td>14</td>
-        <td>7</td>
-        <td>7</td>
-        <td>0.5</td>
+        <td>14</td>
+        <td>0</td>
+        <td>2.1</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#30e5f273de963204d375a7af4a10cf35f1701304" class="src_link" title="spec/poros/gif_generator_spec.rb">spec/poros/gif_generator_spec.rb</a></td>
-        <td class="yellow strong">88.89 %</td>
+        <td class="green strong">100.0 %</td>
         <td>16</td>
         <td>9</td>
-        <td>8</td>
-        <td>1</td>
-        <td>0.9</td>
+        <td>9</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -222,12 +232,12 @@
       
       <tr>
         <td class="strong"><a href="#77e78ca6183b1463d7a97765c0f81216191b66db" class="src_link" title="spec/services/giphy_service_spec.rb">spec/services/giphy_service_spec.rb</a></td>
-        <td class="red strong">66.67 %</td>
+        <td class="green strong">100.0 %</td>
         <td>20</td>
         <td>12</td>
-        <td>8</td>
-        <td>4</td>
-        <td>0.8</td>
+        <td>12</td>
+        <td>0</td>
+        <td>1.3</td>
       </tr>
       
     </tbody>
@@ -954,14 +964,81 @@
 </div>
 
       
+        <div class="source_table" id="38dac73b2574d6725ae664c872a875368c475dcd">
+  <div class="header">
+    <h3>app/poros/gif.rb</h3>
+    <h4><span class="red">66.67 %</span> covered</h4>
+    <div>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Gif</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attr_reader :url, :time, :summary</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def initialize(data)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @url = data[:url]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
+          
+          <code class="ruby">    @time = data[:import_datetime]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
+          
+          <code class="ruby">    @summary = data[:title]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="dc51dcaa5626797739ff5ac1368761cdfce5f193">
   <div class="header">
     <h3>app/poros/gif_generator.rb</h3>
-    <h4><span class="red">77.78 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -986,8 +1063,8 @@
           <code class="ruby">  def initialize(location)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="4">
+          <span class="hits">4</span>
           
           <code class="ruby">    @location = location</code>
         </li>
@@ -995,100 +1072,118 @@
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby">    # @gif = GiphyService.new(@location).get_data</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # def images</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">  # def images</code>
+          <code class="ruby">  #   gif = @gif.map do |agif|</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">  #   gif = @gif.map do |agif|</code>
+          <code class="ruby">  #     Gif.new(agif)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">  #     Gif.new(agif)</code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby">  # end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">  # end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  def get_images</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">  def images</code>
+          <code class="ruby">    images.map do |data|</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="15">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
-          <code class="ruby">    gif = @location.map do |data|</code>
+          <code class="ruby">      Gif.new(data)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="16">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      forecast = GiphyService.new(data[:icon].term)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
-          
-          <code class="ruby">      binding.pry</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="18">
-          
-          
-          <code class="ruby">      Gif.new(GiphyService.new(forecast))</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def images</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @location.map do |data|</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="21">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      GiphyService.new(data[:icon]).get_data</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>
@@ -1580,11 +1675,11 @@
         <div class="source_table" id="d08fa30c0ae93d15130cc41ea29e869b383bfe16">
   <div class="header">
     <h3>app/services/giphy_service.rb</h3>
-    <h4><span class="red">50.0 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>14</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
-      <span class="red"><b>7</b> lines missed.</span>
+      <span class="green"><b>14</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1609,8 +1704,8 @@
           <code class="ruby">  def initialize(term)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="4">
-          
+        <li class="covered" data-hits="4" data-linenumber="4">
+          <span class="hits">4</span>
           
           <code class="ruby">    @term = term</code>
         </li>
@@ -1633,8 +1728,8 @@
           <code class="ruby">  def get_data</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
+        <li class="covered" data-hits="3" data-linenumber="8">
+          <span class="hits">3</span>
           
           <code class="ruby">    get_json(&quot;/v1/gifs/search?q=#{@term}&quot;)[:data]</code>
         </li>
@@ -1669,14 +1764,14 @@
           <code class="ruby">  def get_json(path)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
+        <li class="covered" data-hits="3" data-linenumber="14">
+          <span class="hits">3</span>
           
           <code class="ruby">    response = conn.get(path)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
+        <li class="covered" data-hits="3" data-linenumber="15">
+          <span class="hits">3</span>
           
           <code class="ruby">    JSON.parse(response.body, symbolize_names:true)</code>
         </li>
@@ -1699,20 +1794,20 @@
           <code class="ruby">  def conn</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="3" data-linenumber="19">
+          <span class="hits">3</span>
           
           <code class="ruby">    Faraday.new(:url =&gt; &quot;http://api.giphy.com&quot;) do |faraday|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
+        <li class="covered" data-hits="3" data-linenumber="20">
+          <span class="hits">3</span>
           
           <code class="ruby">      faraday.params[&#39;key&#39;] = ENV[&#39;GIPHY_API_KEY&#39;]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
+        <li class="covered" data-hits="3" data-linenumber="21">
+          <span class="hits">3</span>
           
           <code class="ruby">      faraday.adapter  Faraday.default_adapter</code>
         </li>
@@ -1749,11 +1844,11 @@
         <div class="source_table" id="30e5f273de963204d375a7af4a10cf35f1701304">
   <div class="header">
     <h3>spec/poros/gif_generator_spec.rb</h3>
-    <h4><span class="yellow">88.89 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>9</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1826,8 +1921,8 @@
           <code class="ruby">      gif = @gifgenerate.images</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
-          
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
           <code class="ruby">      expect(gif.count).to eq(25)</code>
         </li>
@@ -2041,13 +2136,13 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    @location = {location: &quot;Denver, Co&quot;}</code>
+          <code class="ruby">    @location = [{location: &quot;Denver, Co&quot;}]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">    @gifger = GifGenerator.new(@location).images</code>
+          <code class="ruby">    @gifger = GifGenerator.new(@location).get_images</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
@@ -2462,11 +2557,11 @@
         <div class="source_table" id="77e78ca6183b1463d7a97765c0f81216191b66db">
   <div class="header">
     <h3>spec/services/giphy_service_spec.rb</h3>
-    <h4><span class="red">66.67 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>12</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <span class="green"><b>12</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -2506,13 +2601,13 @@
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">    @forecast = GifGenerate.new(@location)</code>
+          <code class="ruby">    @forecast = GifGenerator.new(@location)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">    @giphy = GiphyService.new(@location[0].icon)</code>
+          <code class="ruby">    @giphy = GiphyService.new(@location[0][:icon])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -2539,8 +2634,8 @@
           <code class="ruby">    it &quot;get back weather forecast details&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
-          
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
           <code class="ruby">      expect(@giphy).to be_an_instance_of(GiphyService)</code>
         </li>
@@ -2569,14 +2664,14 @@
           <code class="ruby">  it &quot;.get_data&quot;, :vcr do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
           <code class="ruby">    gif = @giphy.get_data</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="18">
-          
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
           
           <code class="ruby">    expect(gif.count).to eq(25)</code>
         </li>
