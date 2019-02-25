@@ -1,4 +1,5 @@
 class CurrentForecast
+  attr_reader :summary, :icon, :time, :temperature, :feels_like, :humidity, :uvIndex, :visibility
   def initialize(data)
     @summary =     data[:summary]
     @icon =        data[:icon]

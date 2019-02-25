@@ -2,21 +2,29 @@ require 'rails_helper'
 
 describe 'DarkSky' do
   before(:each) do
-    @coords = {"lat":39.7392358, "lng":-104.990251}
-    @forecast = ForecastFacade.new(@coords)
+    @forecast = ForecastFacade.new({location: "Denver, Co"})
+    @geo = GeocodeService.new("Denver, Co").get_coordinates
+    @dark = DarkskyService.new(@geo).get_forecast
   end
 
   describe "Forecast Facade" do
-    it "get back weather forecast details" do
+    it "get back weather forecast details", :vcr do
       expect(@forecast).to be_an_instance_of(ForecastFacade)
     end
   end
 
-  it ".get_forecast", :vcr do
-    data = @dark_sky.get_forecast
+  it ".current_forecast", :vcr do
+    data = @forecast.current_forecast
+  end
 
-    expect(data).to have_key(:currently)
-    expect(data).to have_key(:hourly)
-    expect(data).to have_key(:daily)
+  it ".hourly_forecast", :vcr do
+    data = @forecast.hourly_forecast
+    expect(data.count).to eq(49)
+  end
+
+  it ".daily_forecast", :vcr do
+    data = @forecast.daily_forecast
+    expect(data.count).to eq(8)
+
   end
 end

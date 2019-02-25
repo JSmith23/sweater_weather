@@ -1,6 +1,6 @@
 class ForecastFacade
-  def initialize(location)
-    @location = location
+  def initialize(data)
+    @location = data[:location]
   end
 
   def current_forecast

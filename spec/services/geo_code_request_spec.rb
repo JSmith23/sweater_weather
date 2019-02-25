@@ -2,7 +2,8 @@ require 'rails_helper'
 
 describe 'Geo' do
   before(:each) do
-    @geo_code = GeocodeService.new("Chicago, Illinois")
+    data = {location: "Chicago, Illinois"}
+    @geo_code = GeocodeService.new(data)
   end
 
   describe "GeoCode API" do
