@@ -1,5 +1,5 @@
 class GiphyService
-
+  attr_reader :term
   def initialize(term)
     @term = term
   end
