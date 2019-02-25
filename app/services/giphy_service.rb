@@ -5,7 +5,7 @@ class GiphyService
   end
 
   def get_data
-    get_json("/v1/gifs/search?q=#{@term}")
+    get_json("/v1/gifs/search?q=#{@term}")[:data]
   end
 
   private
