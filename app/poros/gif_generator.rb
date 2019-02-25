@@ -5,7 +5,7 @@ class GifGenerator
     @gif = GiphyService.new(@location).get_data
   end
 
-  def get_gifs
+  def images
     gif = @gif.map do |agif|
       Gif.new(agif)
     end
