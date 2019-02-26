@@ -7,7 +7,7 @@ describe 'Giphy Request' do
   end
 
   describe "Visit endpoint" do
-    it "get back gif details", :vcr do
+    xit "get back gif details", :vcr do
       get '/api/v1/gifs?location=denver,co'
       expect(response).to be_successful
       # gifs = JSON.parse(response.body, symbolize_names: true)
