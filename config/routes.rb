@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resource :forecast, only: [:show]
       resource :backgrounds, only: [:show]
       resource :gifs, only: [:show]
+      resources :users, only: [:create, :show]
     end
   end
 end
