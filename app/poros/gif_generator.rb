@@ -18,7 +18,7 @@ class GifGenerator
 
   def images
     @location.map do |data|
-      GiphyService.new(data[:icon]).get_data
+      GiphyService.new(data.icon).get_data
     end
   end
 end
