@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       resource :backgrounds, only: [:show]
       resource :gifs, only: [:show]
       resources :users, only: [:create, :show]
+      resource :session
+      resources :favorites
     end
   end
 end
