@@ -8,12 +8,12 @@ describe 'Giphy' do
   end
 
   describe "Giphy API" do
-    it "get back weather forecast details" do
+    xit "get back weather forecast details" do
       expect(@giphy).to be_an_instance_of(GiphyService)
     end
   end
 
-  it ".get_data", :vcr do
+  xit ".get_data", :vcr do
     gif = @giphy.get_data
     expect(gif.count).to eq(25)
   end

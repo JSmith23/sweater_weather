@@ -1,9 +1,10 @@
 class FlickrService
+  def initialize(tag)
+    @tag = tag
+  end
 
-
-
-  def get_coordinates
-   get_json()
+  def get_image
+   get_json("services/rest/?method=flickr.photos.search&api_key=#{ENV['FLICKR_API_KEY']}&tags=#{@tag}&format=json&nojsoncallback=1")
   end
 
   private
