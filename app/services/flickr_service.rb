@@ -1,11 +1,9 @@
 class FlickrService
 
-  def initialize(forecast)
-    @forecast = forecast
-  end
+
 
   def get_coordinates
-    get_data[:results][0][:geometry][:location]
+   get_json()
   end
 
   private
