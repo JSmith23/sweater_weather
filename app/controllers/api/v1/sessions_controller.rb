@@ -1,11 +1,11 @@
 class Api::V1::SessionsController < ApplicationController
 
   def create
-    binding.pry
-    if user = User.authenticate(session[:email], session[:password])
+    user = User.find_by(email: params[:email])
+    if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      response = {api_key: "#{user.api_key}"}
-      render json: response, status: 201
+      response = {api_key: user.api_key}
+      render json: response, status: 200
     else
       render json: "Unable to login", status: 401
     end
@@ -14,7 +14,7 @@ class Api::V1::SessionsController < ApplicationController
   private
 
   def login_params
-    params.require(:session).permit(:email, :password)
+    params.permit(:email, :password)
   end
 
 end
