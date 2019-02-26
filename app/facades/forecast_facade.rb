@@ -32,4 +32,8 @@ class ForecastFacade
     @dark ||= DarkskyService.new(geo_code).get_forecast
   end
 
+  def giphy
+    @giph ||= GiphyServive.new(@location).get_data
+  end
+
 end
