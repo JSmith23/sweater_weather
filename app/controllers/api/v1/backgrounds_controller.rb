@@ -1,4 +1,5 @@
 class Api::V1::BackgroundsController < ApplicationController
   def show
-  end 
+    render json: BackgroundSerializer.new(BackgroundGenerator.new(params[:location]).get_url)
+  end
 end

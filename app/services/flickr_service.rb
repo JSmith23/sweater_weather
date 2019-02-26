@@ -4,7 +4,7 @@ class FlickrService
   end
 
   def get_image
-   get_json("services/rest/?method=flickr.photos.search&api_key=#{ENV['FLICKR_API_KEY']}&tags=#{@tag}&format=json&nojsoncallback=1")
+    get_json("?method=flickr.photos.search&tags=#{@tag}&format=json&nojsoncallback=1")[:photos][:photo][0]
   end
 
   private
@@ -16,6 +16,7 @@ class FlickrService
 
   def conn
     Faraday.new(:url => "https://api.flickr.com/services/rest/") do |faraday|
+      faraday.params['api_key'] = ENV["FLICKR_API_KEY"]
       faraday.adapter  Faraday.default_adapter
     end
   end
