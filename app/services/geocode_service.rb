@@ -5,7 +5,7 @@ class GeocodeService
   end
 
   def get_coordinates
-    get_data[:results][0][:geometry][:location]
+    get_data.dig(:results, 0, :geometry, :location)
   end
 
   def get_data
