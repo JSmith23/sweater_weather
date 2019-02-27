@@ -1,12 +1,14 @@
 class GifGenerator
-  attr_reader :location
-  def initialize(location)
-    @location = location
-    @daily = ForecastGenerator.new(@location).daily_forecast
+  attr_reader :location, :id
+
+  def initialize(daily_forecast_objects)
+    @id = 'id'
+    @daily_forecast_objects = daily_forecast_objects
+    @daily = ForecastGenerator.new(@daily_forecast_objects).daily_forecast
   end
 
   def images
-    @daily.map do |data|
+    @daily.flat_map do |data|
       GiphyService.new(data.icon).get_data.map do |other|
         Gif.new(other)
       end
