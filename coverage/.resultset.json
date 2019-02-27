@@ -498,35 +498,30 @@
         0,
         null,
         null,
+        1,
+        3,
+        0,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/Jay/turing/3module/r2_projects/sweater_weather/app/controllers/api/v1/favorites_controller.rb": [
         1,
-        null,
-        1,
-        1,
-        1,
         1,
         null,
+        1,
+        1,
         null,
         null,
         1,
         1,
         1,
-        1,
-        1,
-        null,
         null,
         null,
         1,
         1,
         1,
-        1,
-        1,
-        null,
-        null,
-        0,
-        null,
         null,
         null,
         null,
@@ -646,6 +641,6 @@
         null
       ]
     },
-    "timestamp": 1551234738
+    "timestamp": 1551240520
   }
 }

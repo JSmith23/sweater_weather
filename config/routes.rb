@@ -6,7 +6,8 @@ Rails.application.routes.draw do
       resource :gifs, only: [:show]
       resources :users, only: [:create, :show]
       resource :session
-      resources :favorites
+      resources :favorites, only: [:create, :index]
+      delete '/favorites', to: 'favorites#destroy'
     end
   end
 end
