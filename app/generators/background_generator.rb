@@ -1,4 +1,5 @@
 class BackgroundGenerator
+  attr_reader :location, :get_url
   def initialize(location)
     @location = location
     @flickr = FlickrService.new(@location).get_image
