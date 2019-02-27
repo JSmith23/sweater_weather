@@ -1,24 +1,36 @@
-# README
+Sweater Weather
+This app consumes APIs from Google GeoCode and DarkSky to render weather forecast data in json format for given locations and user favorited locations.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Things you may want to cover:
+From GitHub clone down repository using the following commands in terminal:
 
-* Ruby version
+git clone git@github.com:jsmith23/sweater_weather.git
+cd sweater_weather
+Prerequisites
+You will need Rails installed and verify that it is version 5.2
 
-* System dependencies
+To check your version using terminal run: rails -v in the command line. If you have not installed rails, in terminal run: gem install rails -v 5.2 in the command line.
 
-* Configuration
+Installing
+This app requires a few keys.
 
-* Database creation
+You can sign up for a Google API key here: https://cloud.google.com/maps-platform/
 
-* Database initialization
+You can sign up for a Dark Sky API key here: https://darksky.net/dev/register
 
-* How to run the test suite
+Open terminal and run these commands:
 
-* Services (job queues, cache servers, search engines, etc.)
+bundle
 
-* Deployment instructions
+bundle update
 
-* ...
+figaro install
+
+in your config/applicaion.yml file add your keys with these names:
+
+GOOGLE_API_KEY:
+DARK_SKY_API_KEY:
+rails db:{create,migrate,seed}
+
