@@ -10,11 +10,4 @@ class Api::V1::SessionsController < ApplicationController
       render json: "Unable to login", status: 401
     end
   end
-
-  private
-
-  def login_params
-    params.permit(:email, :password)
-  end
-
 end

@@ -14,7 +14,7 @@ describe 'BackgroundGenerator' do
     it ".get_url", :vcr do
       image = @bgenerate.get_url
 
-      expect(image).to eq("https://farm8.staticflickr.com/7856/47214669941_3306be772a.jpg")
+      expect(image).to eq("https://farm8.staticflickr.com/7861/32285623767_b8ec9048a0.jpg")
     end
   end
 
