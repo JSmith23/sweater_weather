@@ -1,31 +1,19 @@
 class Api::V1::FavoritesController < ApplicationController
+  before_action :authenticate_user
 
   def index
-    user = User.find_by(api_key: params[:api_key])
-    if user
-      render json: FavoriteGenerator.new(user).favorites_list
-    end
+    render json: FavoriteGenerator.new(current_user).favorites_list
   end
 
   def create
-    user = User.find_by(api_key: params[:api_key])
-    if user
-      fav = user.create_favorite(favorite_params)
-      render json: {location: fav.location}, status: 201
-    end
+    fav = current_user.create_favorite(favorite_params)
+    render json: {location: fav.location}, status: 201
   end
 
   def destroy
-    user = User.find_by(api_key: params[:api_key])
-    if user
-      fav = user.favorites.find_by(location: params[:location])
-      fav.destroy
-      # render json: "Deleted", status: 204
-    else
-      render json: "Error", status: 404
-    end
+    fav = current_user.favorites.find_by(location: params[:location])
+    fav.destroy
   end
-
 
   private
 

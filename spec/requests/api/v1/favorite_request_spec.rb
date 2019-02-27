@@ -37,7 +37,7 @@ describe "Visit favorite endpoint" do
       expect(user.favorites.count).to eq(4)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-      delete "/api/v1/favorites/#{delete_fav.id}", params: {api_key: user.api_key, location: "Boston, Ma"}
+      delete "/api/v1/favorites", params: {api_key: user.api_key, location: "Boston, Ma"}
 
       expect(response).to be_successful
       expect(user.favorites.count).to eq(3)
