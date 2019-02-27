@@ -11,7 +11,7 @@ class Api::V1::FavoritesController < ApplicationController
   end
 
   def destroy
-    fav = current_user.favorites.find_by(location: params[:location])
+    fav = current_user.favorites.find_by(location: params[:location].downcase)
     fav.destroy
   end
 
