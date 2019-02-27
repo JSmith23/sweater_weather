@@ -45,7 +45,7 @@ describe "Visit favorite endpoint" do
 
     expect(response).to be_successful
     expect(user.favorites.count).to eq(3)
-    expect(response.status).to eq(204)
+    expect(response.status).to eq(200)
   end
 
   it "a user is unable to delete a favorite location due to wrong api key", :vcr do
