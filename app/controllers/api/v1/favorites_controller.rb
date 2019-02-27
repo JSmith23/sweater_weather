@@ -12,6 +12,8 @@ class Api::V1::FavoritesController < ApplicationController
 
   def destroy
     fav = current_user.favorites.find_by(location: params[:location].downcase)
+    fav.destroy
+    render json: FavoriteGenerator.new(current_user).favorites_list
     unless fav.destroy
       render json: "Authorization Failed"
     end
