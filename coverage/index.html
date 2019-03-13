@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-27T20:13:28-07:00">2019-02-27T20:13:28-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-03-12T18:46:59-06:00">2019-03-12T18:46:59-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         7.94
+         8.01
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>38</b> files in total.
-    <b>393</b> relevant lines. 
-    <span class="green"><b>391</b> lines covered</span> and
+    <b>394</b> relevant lines. 
+    <span class="green"><b>392</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -213,11 +213,11 @@
       <tr>
         <td class="strong"><a href="#323ac10d424c4e0c2dd9e2fc4779b58a708beb9d" class="src_link" title="app/poros/daily_forecast.rb">app/poros/daily_forecast.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>9</td>
-        <td>7</td>
-        <td>7</td>
+        <td>10</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
-        <td>18.7</td>
+        <td>20.4</td>
       </tr>
       
       <tr>
@@ -2183,8 +2183,8 @@
     <h3>app/poros/daily_forecast.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2201,7 +2201,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_reader :icon, :precip, :high, :low</code>
+          <code class="ruby">  attr_reader :day, :icon, :precip, :high, :low</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
@@ -2213,34 +2213,40 @@
         <li class="covered" data-hits="32" data-linenumber="4">
           <span class="hits">32</span>
           
-          <code class="ruby">    @icon =   data[:icon]</code>
+          <code class="ruby">    @day =   Time.at(data[:time]).strftime(&quot;%A&quot;)</code>
         </li>
       
         <li class="covered" data-hits="32" data-linenumber="5">
           <span class="hits">32</span>
           
-          <code class="ruby">    @precip = data[:precipProbability]</code>
+          <code class="ruby">    @icon =   data[:icon]</code>
         </li>
       
         <li class="covered" data-hits="32" data-linenumber="6">
           <span class="hits">32</span>
           
-          <code class="ruby">    @high =   data[:temperatureHigh]</code>
+          <code class="ruby">    @precip = data[:precipProbability]</code>
         </li>
       
         <li class="covered" data-hits="32" data-linenumber="7">
           <span class="hits">32</span>
           
+          <code class="ruby">    @high =   data[:temperatureHigh]</code>
+        </li>
+      
+        <li class="covered" data-hits="32" data-linenumber="8">
+          <span class="hits">32</span>
+          
           <code class="ruby">    @low =    data[:temperatureLow]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">end</code>
